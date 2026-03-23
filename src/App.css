@@ -1,0 +1,526 @@
+ /* ============================================================
+   1. GLOBAL STYLES & RESET
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  
+    height: 100vh;
+}
+
+/* ============================================================
+   2. HOME PAGE & ROLE SELECTION STYLES
+   ============================================================ */
+.home-bg {
+    background: url("./background.jpg") no-repeat center center/cover;
+    height: 100vh;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.main-container {
+    display: flex;
+    gap: 30px;
+}
+
+.role-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 50px 30px;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.role-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-border {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px; 
+    margin: 0 auto 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-border img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ============================================================
+   3. LOGIN PAGES STYLES (Glassmorphism UI)
+   ============================================================ */
+.login-body {
+    background-image: url('./background.jpg'); 
+    background-size: cover;
+    background-position: center; 
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.login-glass-box {
+    background: rgba(255, 255, 255, 0.15);  
+    backdrop-filter: blur(15px);            
+    border: 1px solid rgba(255, 255, 255, 0.2);  
+    padding: 40px;
+    border-radius: 20px;
+    width: 380px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.login-glass-box h3, .login-glass-box h2 {
+    margin-bottom: 20px;
+    color: #6B3E26;
+}
+
+.input-field {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-field label {
+    font-size: 0.85rem;
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #e8f0fe;
+}
+
+.forgot-link {
+    display: block;
+    text-align: right;
+    font-size: 0.75rem;
+    color: black;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 13px;
+    background: #FFB703;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #fb8500;
+}
+
+/* ============================================================
+   4. DASHBOARD & OFFICER SELECTION STYLES
+   ============================================================ */
+.phm-selection-wrapper {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=2070&auto=format&fit=crop'); 
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.phm-glass-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.phm-title {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.phm-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.dashboard-box {
+    max-width: 450px;  
+    padding: 50px 40px;
+}
+
+.patient-info-badge {
+    background: rgba(40, 167, 69, 0.15);
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+    font-size: 0.95rem;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.patient-info-badge .dot {
+    height: 10px;
+    width: 10px;
+    background-color: #28a745;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #28a745;
+}
+
+.midwife-list {
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 5px;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.midwife-list::-webkit-scrollbar {
+    display: none;
+}
+
+.phm-officer-btn {
+    background: rgba(255, 255, 255, 0.9);
+    color: #6B3E26;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 20px;
+    width: 100%;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.phm-officer-btn:hover {
+    background: #6B3E26;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(107, 62, 38, 0.3);
+}
+
+.phm-officer-btn span {
+    font-size: 0.85rem; 
+    font-weight: 500;   
+    opacity: 0.8;
+}
+
+.menu-btn {
+    margin-bottom: 15px;
+    justify-content: center;  
+    position: relative;
+    font-weight: 500;
+}
+
+.menu-btn span {
+    position: absolute;
+    right: 20px;
+    font-size: 1.2rem;
+}
+
+.menu-btn:hover {
+    background: #ffffff;
+    color: #6B3E26;
+    transform: scale(1.03);  
+}
+
+.dashboard-menu {
+    margin-top: 10px;
+}
+
+/* ============================================================
+   5. REPORT TABLES & DATA DISPLAY STYLES
+   ============================================================ */
+.web-container {
+    background-color: #F5E6DD;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.form-title {
+    font-size: 32px;
+    color: #6B3E26;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: white;
+}
+
+.report-table th {
+    text-align: left;
+    padding: 12px;
+    background-color: #F5E6DD; 
+    color: #6B3E26;
+    border-bottom: 2px solid #6B3E26;
+    font-size: 0.9rem;
+}
+
+.report-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.85rem;
+    color: #333;
+}
+
+.report-table tr:hover {
+    background-color: #fcf8f5;
+}
+
+.vaccine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vaccine-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.age-title { font-size: 14px; color: #8d5d44; }
+.vaccine-name { font-size: 20px; color: #6B3E26; margin: 5px 0 20px 0; }
+
+.input-group { margin-bottom: 15px; }
+.input-label { display: block; font-weight: 600; margin-bottom: 5px; color: #333; }
+
+.web-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #6B3E26;
+    border-radius: 6px;
+}
+
+textarea.web-input { height: 100px; resize: none; }
+
+.save-container { text-align: center; margin-top: 30px; }
+.save-btn {
+    background-color: #6B3E26;
+    color: white;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ============================================================
+   6. INDIVIDUAL CHILD DETAILS STYLES
+   ============================================================ */
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #EEDDD4;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 340px;
+    background-color: white;
+    border-radius: 35px;
+    padding: 25px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5C3A21;
+}
+
+.info-box {
+    background-color: #F5F5F5;
+    padding: 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.label {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+}
+
+.value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 4px 0 0 0;
+}
+
+/* ============================================================
+   7. UTILITY CLASSES (Buttons, Errors, Print)
+   ============================================================ */
+.error-text {
+    color: red;
+    font-size: 0.75rem;
+    display: block;
+    margin-top: 2px;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #ffb703; 
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #ffcc00;  
+  color: #000; 
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.edit-btn:hover {
+  background-color: #e6b800;  
+}
+
+.save-mini-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.cancel-mini-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-buttons-container {
+  display: flex;  
+  flex-direction: row;  
+  gap: 8px;  
+  align-items: center;  
+  justify-content: center;  
+  min-width: 100px;  
+}
+
+.save-mini-btn, .cancel-mini-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  white-space: nowrap;  
+}
+
+.phm-back-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: block;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+
+.phm-back-btn:hover {
+  opacity: 0.7;
+}
+
+.loading-text {
+  color: white;
+  font-style: italic;
+}
+
+ 
+@media print {
+    .back-btn, .save-container, .form-title {
+        display: none;
+    }
+    .web-container {
+        background-color: white;
+        padding: 0;
+    }
+}
