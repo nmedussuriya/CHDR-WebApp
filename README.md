@@ -2,25 +2,36 @@
 
 This project is a React-based web application developed as part of a group project to manage and monitor child health records digitally. It supports multiple healthcare roles such as Doctors, PHNS, and SPHM, providing access to child details and health reports.
 
-**Feature**
-Manage child health records
-View child health reports
-View immunization reports
-Role-based login system:
-Doctor
-PHNS (Public Health Nursing Sister)
-SPHM (Supervising Public Health Midwife)
-Dashboard interfaces for each role
-View detailed child information
-Simple navigation between pages
-Technologies Used
-Frontend: React.js
-Routing: React Router
-Backend/Database: Firebase (requires configuration)
-Styling: CSS
-Testing: React Testing Library
+---
 
-**Project Structure**
+## Features
+
+- Manage child health records  
+- View child health reports  
+- View immunization reports  
+- Role-based login system:
+  - Doctor  
+  - PHNS (Public Health Nursing Sister)  
+  - SPHM (Supervising Public Health Midwife)  
+- Dashboard interfaces for each role  
+- View detailed child information  
+- Simple navigation between pages  
+
+---
+
+## Technologies Used
+
+- **Frontend:** React.js  
+- **Routing:** React Router  
+- **Backend/Database:** Firebase (requires configuration)  
+- **Styling:** CSS  
+- **Testing:** React Testing Library  
+
+---
+
+## Project Structure
+
+```
 CHDR-WebApp/
 │
 ├── public/
@@ -42,28 +53,44 @@ CHDR-WebApp/
 │
 ├── package.json
 └── README.md
+```
 
-**Installation and Setup**
+---
+
+## Installation and Setup
 
 Follow these steps to run the project locally:
 
-1. Clone the repository
+### 1. Clone the repository
+```bash
 git clone https://github.com/your-username/CHDR-WebApp.git
-2. Navigate to the project folder
+```
+
+### 2. Navigate to the project folder
+```bash
 cd CHDR-WebApp
-3. Install dependencies
+```
+
+### 3. Install dependencies
+```bash
 npm install
-4. Run the application
+```
+
+### 4. Run the application
+```bash
 npm start
+```
 
-The application will run at:
-
+The application will run at:  
 http://localhost:3000
-Firebase Configuration
+
+---
+
+## Firebase Configuration
 
 This project includes Firebase dependencies, but configuration may be required:
 
-Create a Firebase project
-Add your Firebase configuration in:
-src/config/firebaseConfig.js
-Enable necessary services such as Firestore and Authentication
+1. Create a Firebase project  
+2. Add your Firebase configuration in:  
+   `src/config/firebaseConfig.js`  
+3. Enable necessary services such as Firestore and Authentication  
