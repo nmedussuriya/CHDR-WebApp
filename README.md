@@ -2,7 +2,7 @@
 
 This project is a React-based web application developed as part of a group project to manage and monitor child health records digitally. It supports multiple healthcare roles such as Doctors, PHNS, and SPHM, providing access to child details and health reports.
 
-# Features
+**Feature**
 Manage child health records
 View child health reports
 View immunization reports
@@ -20,7 +20,7 @@ Backend/Database: Firebase (requires configuration)
 Styling: CSS
 Testing: React Testing Library
 
-# Project Structure
+**Project Structure**
 CHDR-WebApp/
 │
 ├── public/
@@ -43,7 +43,7 @@ CHDR-WebApp/
 ├── package.json
 └── README.md
 
-# Installation and Setup
+**Installation and Setup**
 
 Follow these steps to run the project locally:
 
